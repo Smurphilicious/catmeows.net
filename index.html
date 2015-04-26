@@ -1,0 +1,936 @@
+<html>
+
+<head>
+
+
+
+  <link rel="shortcut icon" href="http://storage.googleapis.com/catmeows.net/cat.ico"/>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+
+
+  <title>Catmeows.net making games that.... exist?</title>
+
+  <style>
+
+        #scavenge{
+
+    cursor:pointer;
+
+    color:rgb(0, 153, 255);
+
+
+
+  }
+
+
+
+  #eat{
+
+  cursor:pointer;
+
+  color:rgb(0, 153, 255);
+
+
+
+  }
+
+
+
+  #name{
+
+    cursor:pointer;
+
+    color:rgb(0, 153, 255);
+
+
+
+  }
+
+  #numDay{
+
+      font-size:0;
+
+  }
+
+    #cfcbutton{
+
+     position:relative;
+
+        left:100px;
+
+        font-family: 'Roboto', sans-serif;
+
+        
+
+        
+
+    }
+
+  #content{
+
+   position:absolute;
+
+   top:31%;
+
+      
+
+      
+
+  }
+
+  #logo{
+
+    position:absolute;
+
+    top:4-px;
+
+    left:0-px;
+
+      
+
+  }
+
+  body {
+
+      font-family: 'Roboto', sans-serif;
+
+    
+
+    background: -webkit-linear-gradient(top, #2196FF, #2196FF 30.2%, white 30.2%, white);
+
+    padding-top: 0px;
+
+    padding-right: 0px;
+
+    padding-bottom: 0px;
+
+    padding-left: 0px;
+
+  }
+
+  #gamesbutton{
+
+      padding: 0;
+
+border: none;
+
+background: none;
+
+   background-color:#C6FF00
+
+       ;
+
+   font-family: 'Roboto', sans-serif;
+
+      font-size:40px;
+
+      box-shadow: 3px 6px 4px #1C1C1C;
+
+      position:absolute;
+
+      left:405px;
+
+      top:18.2%;
+
+  }
+
+       #homebutton{
+
+      padding: 0;
+
+border: none;
+
+background: none;
+
+   background-color:#C6FF00
+
+       ;
+
+   font-family: 'Roboto', sans-serif;
+
+      font-size:40px;
+
+      box-shadow: 2px 4px 3px #1C1C1C;
+
+      position:absolute;
+
+      left:5px;
+
+      top:18.2%;
+
+  }
+
+       #aboutbutton{
+
+      padding: 0;
+
+border: none;
+
+background: none;
+
+   background-color:#C6FF00
+
+       ;
+
+   font-family: 'Roboto', sans-serif;
+
+      font-size:250%;
+
+      box-shadow: 3px 6px 4px #1C1C1C;
+
+      position:absolute;
+
+      left:205px;
+
+      top:18.2%;
+
+  }
+
+    #gamecontent{
+
+     position:absolute;
+
+        top:31%;
+
+        left:1%;
+
+        
+
+    }
+
+    #ssbox{
+
+    border-style: solid;
+
+    border-width:1px;
+
+        
+
+        
+
+    }
+
+  </style>
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+    <div id="top">  <a href="http://storage.googleapis.com/catmeows.net/index.html"><img id="logo" height="15%"src="http://storage.googleapis.com/catmeows.net/catmeowsbeta.png"></a></div>
+
+ <br>
+
+    <span id="content">Welcome to catmeows.net this website is unfinished but you can still play Simply Survival in the games tab</span><span id="gamecontent"></span>
+
+    <button id="homebutton">Home</button>
+
+    <button id="aboutbutton">About</button>
+
+    <button id="gamesbutton">Games</button>
+
+
+
+
+
+<script>
+
+var gamesButton = document.getElementById("gamesbutton")
+
+var content = document.getElementById("content")
+
+var aboutButton = document.getElementById("aboutbutton")
+
+var homeButton = document.getElementById("homebutton")
+
+var gameContent = document.getElementById("gamecontent")
+
+var yourOnGames = false;
+
+
+
+
+
+aboutButton.addEventListener("mousedown", function(){
+
+   aboutButton.style.boxShadow = "2px 4px 3px #1C1C1C"
+
+   content.innerHTML = "Welcome to catmeows.net a website for games made by a person... <strong><em>WOW!</em></strong><br><br> <strong>Simply Survival</strong><br>Click on scavenge for supplies to subtract one energy but recieve a random amount of food and water but remember if you run out of energy or sanity you die, click on eat food and water to subtract 1 food and 1 water but recieve 1 energy and 1 sanity, randomly when you scavenge you can be attacked by bandits which kill you or have a person join your group. When a person joins your group click on your name to switch between group members, every group member has their own sanity and energy but share food and water. If a group member runs out of energy they die and if they run out of sanity they can no longer scavenge until their sanity is regained. If a group member dies 5 sanity is removed from all members of your group present or future.<br>-Bugs-<br>There is a bug that prevents action when a person joins your group, if this happens simply click on your name to fix the problem<br>If you are extremely unlucky it is possible for a person to be attacked by bandits and run out of energy on the same scavenge which subtracts 10 sanity"
+
+   homeButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+
+   gamesButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+
+   gameContent.innerHTML = ""
+
+   yourOnGames = false
+
+});
+
+homeButton.addEventListener("mousedown", function(){
+
+   homeButton.style.boxShadow = "2px 4px 3px #1C1C1C"
+
+   content.innerHTML = 'Welcome to catmeows.net this website is unfinished but you can still play Simply Survival in the games tab'
+
+   aboutButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+
+   gamesButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+
+   gameContent.innerHTML = ""
+
+   yourOnGames = false
+
+    
+
+    
+
+});
+
+    
+
+    var gotogames = function(){
+
+ gamesButton.style.boxShadow = "2px 4px 3px #1C1C1C"
+
+ content.innerHTML = ''
+
+ aboutButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+
+ homeButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+
+ gameContent.innerHTML = '<strong id="ssbuttonopen">Simply Survival</strong><br>Gameplay guide + features (bugs) list located in the about tab<br><span id="openedss"><div id="ssbox">You have <span id="numFood">0</span> food, <span id="numWater">0</span> water<br><br><a id="name">You</a><br><span id="energy">0</span> energy<br><span id="numSanity">20</span> sanity<br><a id="scavenge">Scavenge for supplies</a><br><a id="eat">Eat food and drink water</a><br><span id="numDay"></div></span></span><br> <br><strong>Cowboy Fisty Cuffs</strong><br>Coming Soon'
+
+
+
+    
+
+
+
+ var day = 0;
+
+
+
+  var food = 0;
+
+
+
+  var water = 0;
+
+
+
+  var energy = 5;
+
+
+
+  var deaths = 0;
+
+
+
+  var didja = false;
+
+
+
+  var sanity = [10]
+
+
+
+  var joinedOn = [0]
+
+
+
+  var trueSanity = sanity
+
+
+
+  var groupMembers = 1;
+
+
+
+  var aliveMembers = 1;
+
+
+
+  var memberEnergy = [5];
+
+
+
+  var memberNames = ["You"];
+
+
+
+  var memberTimeEat = [0]
+
+
+
+  var isScavenging = [false]
+
+
+
+  var currentMember = 0;
+
+
+
+  var numDay = document.getElementById("numDay");
+
+
+
+  var numFood = document.getElementById("numFood");
+
+
+
+  var numWater = document.getElementById("numWater");
+
+
+
+  var numEnergy = document.getElementById("energy");
+
+
+
+  var scavenge = document.getElementById("scavenge");
+
+
+
+  var eat = document.getElementById("eat");
+
+
+
+  var nameSwitch = document.getElementById("name")
+
+
+
+  var numSanity = document.getElementById("numSanity")
+
+
+
+  numSanity.textContent = trueSanity
+
+
+
+  numEnergy.textContent = energy;
+
+
+
+  var actionsToday = 0;
+
+
+
+  var timeEat = 0;
+
+
+
+  var newDay = function(){
+
+
+
+    memberEnergy[currentMember] -= 1;
+
+    energy = memberEnergy[currentMember]
+
+    actionsToday += 1;
+
+   isScavenging[currentMember] = true;
+
+    numEnergy.textContent = energy
+
+
+
+    if(memberEnergy[currentMember] === 0){
+
+        deaths++;
+
+        sanity[currentMember] = 0
+
+    if(sanity[currentMember] <= 0 && sanity[currentMember] - (deaths * 5) - (joinedOn[currentMember] * 5) <= 0){
+
+        trueSanity = 0;
+
+        numSanity.textContent = trueSanity
+
+    }else{
+
+        trueSanity = sanity[currentMember] - (deaths * 5) - (joinedOn[currentMember] * 5)
+
+        numSanity.textContent = trueSanity
+
+
+
+    }
+
+    if(sanity[0] - (deaths * 5) <= 0){
+
+        gotogames();
+
+    }
+
+
+
+    numSanity.textContent = trueSanity
+
+        alert(memberNames[currentMember] + " Died!")
+
+
+
+        if(currentMember === 0){
+
+            gotogames();
+
+        }
+
+
+
+    }
+
+
+
+
+
+  }
+
+  var restDay = function(){
+
+    actionsToday += 1;
+
+    memberEnergy[currentMember] -= 1;
+
+    isScavenging[currentMember] = true;
+
+    energy = memberEnergy[currentMember]
+
+    numEnergy.textContent = energy;
+
+  }
+
+  var finishDay = function(){
+
+    day++;
+
+    numDay.textContent = day;
+
+    for(var i=0; i<memberNames.length;i++){
+
+     isScavenging[i] = false
+
+    }
+
+  }
+
+
+
+  var eatFood = function(){
+
+
+
+      if(food > 0 && water > 0 && energy !== 0){
+
+    food -= 1;
+
+    water -= 1;
+
+    timeEat++;
+
+    sanity[currentMember] += 1
+
+    if(sanity[currentMember] <= 0 && sanity[currentMember] - (deaths * 5) - (joinedOn[currentMember] * 5) <= 0){
+
+        trueSanity = 0;
+
+    }else{
+
+        trueSanity = sanity[currentMember] - (deaths * 5) - (joinedOn[currentMember] * 5)
+
+
+
+    }
+
+    numSanity.textContent = trueSanity
+
+    for(var i=0; i < memberEnergy.length; i++){
+
+        memberTimeEat[i]++;
+
+    }
+
+
+
+    memberTimeEat[currentMember] = timeEat;
+
+    memberEnergy[currentMember] += 1;
+
+
+
+    energy = memberEnergy[currentMember]
+
+    numDay.textContent = day
+
+
+
+    numFood.textContent = food
+
+
+
+    numWater.textContent = water
+
+
+
+    numEnergy.textContent = energy
+
+
+
+      }
+
+
+
+  }
+
+
+
+  var goScavenge = function(){
+
+
+
+    if(energy > 0 && trueSanity > 0){
+
+
+
+    food += Math.round(Math.floor(Math.random() * (3 - 0)) + 0);
+
+
+
+    water += Math.round(Math.floor(Math.random() * (3 - 0)) + 0);
+
+
+
+    newDay();
+
+
+
+    numDay.textContent = day
+
+
+
+    numFood.textContent = food
+
+
+
+    numWater.textContent = water
+
+
+
+    numEnergy.textContent = energy
+
+    isScavenging[currentMember] = true;
+
+    if(Math.round(Math.floor(Math.random() * (9 - 0)) + 0) === 3 && memberEnergy[currentMember] !== 1){
+
+        deaths++;
+
+        memberEnergy[currentMember] = 0;
+
+        energy = memberEnergy[currentMember]
+
+        alert(memberNames[currentMember] + " got attacked by bandits!")
+
+        numEnergy.textContent = energy
+
+        sanity[currentMember] = 0
+
+        numSanity.textContent = sanity[currentMember]
+
+        if(memberEnergy[0] === 0){
+
+            gotogames();
+
+        }
+
+    if(sanity[0] - (deaths * 5) <= 0){
+
+        gotogames();
+
+    }
+
+    }
+
+
+
+
+
+    if(Math.round(Math.floor(Math.random() * (10 - 0)) + 0) > 8 && memberEnergy[0] > 0){
+
+        var firstName  = Math.round(Math.floor(Math.random() * (15 - 0)) + 0);
+
+        if (firstName === 0){
+
+            var firstNameString = "Billy";
+
+        }else if(firstName === 1){
+
+            var firstNameString = "Bobby"
+
+        }else if(firstName === 2){
+
+            var firstNameString = "Timmy"
+
+        }else if(firstName === 3){
+
+            var firstNameString = "Joey"
+
+        }else if(firstName === 4){
+
+            var firstNameString = "Kyle"
+
+        }else if(firstName === 5){
+
+            var firstNameString = "Alex"
+
+        }else if(firstName === 6){
+
+            var firstNameString = "Wilfred"
+
+        }else if(firstName === 7){
+
+            var firstNameString = "Alan"
+
+        }else if(firstName === 8){
+
+            var firstNameString = "Ryan"
+
+        }else if(firstName === 9){
+
+            var firstNameString = "Wyatt"
+
+        }else if(firstName === 10){
+
+            var firstNameString = "Robert"
+
+        }else if(firstName === 11){
+
+            var firstNameString = "Amy"
+
+        }else if(firstName === 12){
+
+            var firstNameString = "Marigold"
+
+        }else if(firstName === 13){
+
+            var firstNameString = "Hannah"
+
+        }else if(firstName === 14){
+
+            var firstNameString = "Anna"
+
+        }else{
+
+            var firstNameString = "Petunia"
+
+        }
+
+        var lastName  = Math.round(Math.floor(Math.random() * (12 - 0)) + 0);
+
+        if(lastName === 0){
+
+            var lastNameString = "Robertson"
+
+        }else if(lastName === 1){
+
+            var lastNameString = "Warfstache"
+
+        }else if(lastName === 2){
+
+            var lastNameString = "Smith"
+
+        }else if(lastName === 3){
+
+            var lastNameString = "Johnson"
+
+        }else if(lastName === 4){
+
+            var lastNameString = "Jones"
+
+        }else if(lastName === 5){
+
+            var lastNameString = "Ricardo"
+
+        }else if(lastName === 6){
+
+            var lastNameString = "Brown"
+
+        }else if(lastName === 7){
+
+            var lastNameString = "Wilson"
+
+        }else if(lastName === 8){
+
+            var lastNameString = "Martin"
+
+        }else if(lastName === 9){
+
+            var lastNameString = "White"
+
+        }else if(lastName === 10){
+
+            var lastNameString = "Lee"
+
+        }else if(lastName === 11){
+
+            var lastNameString = "Gonzalez"
+
+        }else if(lastName === 12){
+
+            var lastNameString = "Lee"
+
+        }
+
+
+
+        joinedOn.push(deaths)
+
+        memberNames.push(firstNameString + " " + lastNameString)
+
+        memberEnergy.push(Math.round(Math.floor(Math.random() * (4 - 1)) + 1))
+
+        memberTimeEat.push(timeEat)
+
+        sanity.push(10)
+
+        numSanity.textContent = sanity[currentMember]
+
+        alert(firstNameString + " " + lastNameString + " has joined your group")
+
+        groupMembers++
+
+        gn.textContent = groupMembers;
+        
+
+
+
+
+
+
+
+
+    }
+
+
+
+    }
+
+
+
+  }
+
+
+
+  var switchName = function(){
+
+    if(currentMember >= memberNames.length - 1){
+
+    currentMember = 0;
+
+    nameSwitch.textContent = memberNames[currentMember];
+
+    energy = memberEnergy[currentMember]
+
+    numEnergy.textContent = energy;
+
+
+
+    }else{
+
+    currentMember++;
+
+    nameSwitch.textContent = memberNames[currentMember];
+
+    energy = memberEnergy[currentMember]
+
+    numEnergy.textContent = energy;
+
+    numSanity.textContent = sanity[currentMember]
+
+    }
+
+        if(sanity[currentMember] <= 0 && sanity[currentMember] - (deaths * 5) - (joinedOn[currentMember] * 5)  <= 0){
+
+        trueSanity = 0;
+
+    }else{
+
+        trueSanity = sanity[currentMember] - (deaths * 5) - (joinedOn[currentMember] * 5)
+
+
+
+    }
+
+    numSanity.textContent = trueSanity
+
+  }
+
+  var debug = function(){
+
+      alert(numEnergy[currentMember])
+
+  }
+
+
+
+  scavenge.addEventListener("click", goScavenge);
+
+
+
+  eat.addEventListener("click", eatFood);
+
+
+
+  nameSwitch.addEventListener("click", switchName);
+
+   if (actionsToday === memberNames.length){
+
+       finishDay();
+
+       alert("newday")
+
+   }    
+
+}
+
+gamesButton.addEventListener("mousedown", gotogames);
+
+</script>
+
+    <script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+
+  ga('create', 'UA-61651212-1', 'auto');
+
+  ga('send', 'pageview');
+
+
+
+</script>
+
+</body>
+
+
+
+
+
+
+
+</html>
+
