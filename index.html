@@ -628,7 +628,7 @@ homeButton.addEventListener("mousedown", function(){
 
     isScavenging[currentMember] = true;
 
-    if(Math.round(Math.floor(Math.random() * (9 - 0)) + 0) === 3 && memberEnergy[currentMember] !== 1){
+    if(Math.round(Math.floor(Math.random() * (9 - 0)) + 0) === 3 && memberEnergy[currentMember] !== 1 && memberEnergy[currentMember] > 1){
 
         deaths++;
 
