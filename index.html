@@ -117,8 +117,8 @@
 border: none;
 
 background: none;
-
-   background-color:#C6FF00
+color:#00BCD4;
+   
 
        ;
 
@@ -137,14 +137,13 @@ background: none;
   }
 
        #homebutton{
-
+      color:#00BCD4;
       padding: 0;
 
 border: none;
 
 background: none;
 
-   background-color:#C6FF00
 
        ;
 
@@ -163,14 +162,13 @@ background: none;
   }
 
        #aboutbutton{
-
+    color:#00BCD4;
       padding: 0;
 
 border: none;
 
 background: none;
 
-   background-color:#C6FF00
 
        ;
 
@@ -269,13 +267,14 @@ var yourOnGames = false;
 
 aboutButton.addEventListener("mousedown", function(){
 
-   aboutButton.style.boxShadow = "2px 4px 3px #1C1C1C"
+   
 
    content.innerHTML = "Welcome to catmeows.net a website for games made by a person... <strong><em>WOW!</em></strong><br><br> <strong>Simply Survival</strong><br>Click on scavenge for supplies to subtract one energy but recieve a random amount of food and water but remember if you run out of energy or sanity you die, click on eat food and water to subtract 1 food and 1 water but recieve 1 energy and 1 sanity, randomly when you scavenge you can be attacked by bandits which kill you or have a person join your group. When a person joins your group click on your name to switch between group members, every group member has their own sanity and energy but share food and water. If a group member runs out of energy they die and if they run out of sanity they can no longer scavenge until their sanity is regained. If a group member dies 5 sanity is removed from all members of your group present or future.<br>-Bugs-<br>There is a bug that prevents action when a person joins your group, if this happens simply click on your name to fix the problem<br>If you are extremely unlucky it is possible for a person to be attacked by bandits and run out of energy on the same scavenge which subtracts 10 sanity"
 
-   homeButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+   
 
-   gamesButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+   
+  
 
    gameContent.innerHTML = ""
 
@@ -285,13 +284,13 @@ aboutButton.addEventListener("mousedown", function(){
 
 homeButton.addEventListener("mousedown", function(){
 
-   homeButton.style.boxShadow = "2px 4px 3px #1C1C1C"
+   
 
    content.innerHTML = 'Welcome to catmeows.net this website is unfinished but you can still play Simply Survival in the games tab'
 
-   aboutButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+   
 
-   gamesButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+  
 
    gameContent.innerHTML = ""
 
@@ -307,13 +306,13 @@ homeButton.addEventListener("mousedown", function(){
 
     var gotogames = function(){
 
- gamesButton.style.boxShadow = "2px 4px 3px #1C1C1C"
+ 
 
  content.innerHTML = ''
 
- aboutButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+ 
 
- homeButton.style.boxShadow = "3px 6px 4px #1C1C1C"
+ 
 
  gameContent.innerHTML = '<strong id="ssbuttonopen">Simply Survival</strong><br>Gameplay guide + features (bugs) list located in the about tab<br><span id="openedss"><div id="ssbox">You have <span id="numFood">0</span> food, <span id="numWater">0</span> water<br><br><a id="name">You</a><br><span id="energy">0</span> energy<br><span id="numSanity">20</span> sanity<br><a id="scavenge">Scavenge for supplies</a><br><a id="eat">Eat food and drink water</a><br><span id="numDay"></div></span></span><br> <br><strong>Cowboy Fisty Cuffs</strong><br>Coming Soon'
 
