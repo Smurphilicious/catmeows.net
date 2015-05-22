@@ -107,7 +107,9 @@
             input.addEventListener('keypress', function (e) {
                 var key = e.which || e.keyCode;
                 if (key === 13 && level == 2) {
-
+                    if(level == 2){
+                        text.innerHTML += input.value + "<br>";
+                    }
                     if( input.value == "no" && nos == 0 && level == 2){
                         text.innerHTML += "Are you sure?<br>"
                         input.value = ""
@@ -171,7 +173,7 @@
                         nos++;
                         input.value = ""
                     }else if(input.value == "no" && nos == 2 && level == 3){
-                        text.innerHTML += "Well, remember that know<br>"
+                        text.innerHTML += "Well, remember that now<br>"
                         text.innerHTML += "Level 3 Complete!<br>"
                         nos = 0;
                         input.value = "";
@@ -197,7 +199,7 @@
                         text.innerHTML += "Self Advertisement FTW<br>"
                         input.value = ""
                     }else if(nos == 1 && level == 3 && input.value == "hint") {
-                        text.innerHTML += "lmn_p";
+                        text.innerHTML += "lmn_p<br>";
                         input.value = ""
                     }else if(nos == 2 && level == 3 && input.value == "hint") {
                         text.innerHTML += "No hint necessary<br>"
