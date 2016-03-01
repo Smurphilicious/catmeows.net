@@ -92,7 +92,7 @@
                             input.value = ""
                         }
                     } else if(input.value == "hint") {
-                        text.innerHTML += "360 noscope... but cooler<br>";
+                        text.innerHTML += "360 noscope";
                     }else{
                         text.innerHTML += "Error: Command not recognized<br>";
                     }
@@ -267,10 +267,12 @@
                             };
                         }else if(nnos == 1){
                             if(nos == 19){
-                                text.innerHTML += "Wow you beat the demo!!!<br>The full game will feature 101 levels in the full version and 20 in the free version<br>"
+                               text.innerHTML += "Some people have too much time on their hands"
                                 input.value = ""
                                 nos = 0;
                                 nnos = 0;
+                                level = 5;
+                                nextlevel5();
                             }else{
                                 text.innerHTML += nos + " is incorrect<br>"
                                 input.value = ""
@@ -287,6 +289,30 @@
                 }
             }
         });
+    }
+    var nextLevel5 = function(){
+        nos = 0;
+        text.innerHTML += "Level 5: Keepo is<br>"
+        if(level == 3) {
+            console.log(nos)
+            input.addEventListener('keypress', function (e) {
+                var key = e.which || e.keyCode;
+                if (key === 13) {
+                    if(level == 3) {
+                        text.innerHTML += input.value + "<br>";
+                    }
+                    if(input.value == "kappa meepo" && level == 5){
+                        text.innerHTML += "OH MAN YOU GOT IT<br>";
+                        input.value = ""
+                        level = 6;
+                    }else if(input.value == "hint" && level == 5){
+                        text.innerHTML += "Twitch.tv"
+                    }else if(level == 5){
+                        text.innerHTML += "nope :c"
+                    }
+                }
+            });
+        }
     }
 
 
